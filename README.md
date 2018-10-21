@@ -1,2 +1,1 @@
-# desaprenderonline
-Sitio Web del Proyecto Desaprender
+# lep-talleres

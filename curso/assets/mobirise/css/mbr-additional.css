@@ -1755,10 +1755,21 @@ body {
     font-size: 0.8rem;
   }
 }
+.cid-rcGJm1hA7V {
+  padding-top: 60px;
+  padding-bottom: 0px;
+  background-color: #ca1c1c;
+}
+.cid-rcGJm1hA7V .mbr-section-subtitle {
+  color: #efefef;
+}
+.cid-rcGJm1hA7V B {
+  color: #ffffff;
+}
 .cid-r6ojAhqtJS {
-  padding-top: 90px;
+  padding-top: 45px;
   padding-bottom: 90px;
-  background: linear-gradient(45deg, #072116, #227f56);
+  background: linear-gradient(45deg, #ca1c1c, #ca1c1c);
 }
 .cid-r6ojAhqtJS .list-group-item {
   padding: .75rem 3.25rem;

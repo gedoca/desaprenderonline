@@ -75,9 +75,7 @@
     "sitemapSwitcherAuto": false,
     "siteUrl": false,
     "cookiesAlert": false,
-    "gdpr": false,
-    "publishType": "local",
-    "publishPath": "file:///E:/Proyectos/Github/desaprenderonline"
+    "gdpr": false
   },
   "pages": {
     "index.html": {

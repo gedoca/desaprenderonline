@@ -209,7 +209,7 @@ color: #fff;
   color: #fff;
   opacity: .8;
   margin-bottom: 30px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .site-hero > .container {
@@ -236,6 +236,24 @@ color: #fff;
 .site-hero .site-hero-inner {
   min-height: 750px;
   height: 100vh;
+}
+
+
+.texto-animado:before {
+ content: 'EDUCAR';
+ animation: animate infinite 12s;
+}
+@keyframes animate {
+ 0% {
+	content: 'EDUCAR';
+}
+ 40% {
+	content: 'COMPRENDER';
+}
+ 70% {
+	content: 'APRENDER';
+}
+
 }
 
 .box {
@@ -552,8 +570,8 @@ textarea.form-control {
 }
 
 .btn.btn-primary:hover, .btn.btn-primary:active, .btn.btn-primary:focus {
-  border-color: #3395ff;
-  background: #3395ff;
+  border-color: #227f56;
+  background: #227f56;
 }
 
 .btn.btn-sm {

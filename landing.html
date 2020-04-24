@@ -97,9 +97,15 @@
 <select name="OS" class="btn btn-primary" data-wow-delay="0.85s" onclick="$('#fh5co-download').goTo();return false;" onchange="location = this.value;">
    <option selected value="0"> COMIENZA AHORA </option>
    <option id="botonargentina" value="/curso/argentina">Argentina - $1499</option> 
-   
-   <script type="text/javascript">
-document.getElementById('botonargentina').addEventListener('selected', function() {
+   <option value="/curso/chile">Chile - $34900</option> 
+   <option value="/curso/colombia">Colombia - $159000</option>
+   <option value="/curso/mexico">México - $990</option> 
+   <option value="/curso/mundo">Resto del Mundo - US$39</option> 
+</select>
+
+<button id="botónPagar">Iniciar pago</button>
+<script type="text/javascript">
+document.getElementById('botónPagar').addEventListener('click', function() {
 fbq('track', 'InitiateCheckout', {
     value: 1499,
     currency: 'ARS',
@@ -107,13 +113,6 @@ fbq('track', 'InitiateCheckout', {
 ...
 }, false);
 </script>
-
-   <option value="/curso/chile">Chile - $34900</option> 
-   <option value="/curso/colombia">Colombia - $159000</option>
-   <option value="/curso/mexico">México - $990</option> 
-   <option value="/curso/mundo">Resto del Mundo - US$39</option> 
-</select>
-
             </div>
 
             

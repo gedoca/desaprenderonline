@@ -95,7 +95,7 @@
               <h1>APRENDÉ OTRAS MANERAS DE APRENDER</h1>
               <p class="lead">En este curso vas a crear tu propia mirada pedagógica inspirándote en las experiencias más innovadoras de transformación educativa.</p>
 <select name="OS" class="btn btn-primary" data-wow-delay="0.85s" onclick="$('#fh5co-download').goTo();return false;" onchange="location = this.value;">
-<option selected value="0"> COMIENZA AHORA </option>
+   <option selected value="0"> COMIENZA AHORA </option>
    <option id="botonargentina" value="/curso/argentina">Argentina - $1499</option> 
    <option value="/curso/chile">Chile - $34900</option> 
    <option value="/curso/colombia">Colombia - $159000</option>
@@ -391,7 +391,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Derec
     <script src="js/main.js"></script>
 	
 <script type="text/javascript">
-document.getElementById('botonargentina').addEventListener('select', function() {
+document.getElementById('botonargentina').addEventListener('onchange', function() {
   fbq('track', 'InitiateCheckout', {
     value: 1499,
     currency: 'ARS',

@@ -106,10 +106,12 @@
 <button id="botónPagar">Iniciar pago</button>
 <script type="text/javascript">
 document.getElementById('botónPagar').addEventListener('click', function() {
-fbq('track', 'InitiateCheckout', {
+<script>
+  fbq('track', 'InitiateCheckout', {
     value: 1499,
     currency: 'ARS',
   });
+</script>;
 ...
 }, false);
 </script>

@@ -42,10 +42,12 @@
   'https://connect.facebook.net/en_US/fbevents.js');
   fbq('init', '232470194501034');
   fbq('track', 'PageView');
+
 </script>
 <noscript><img height="1" width="1" style="display:none"
   src="https://www.facebook.com/tr?id=232470194501034&ev=PageView&noscript=1"
 /></noscript>
+
 <!-- End Facebook Pixel Code -->
 
     <header role="banner">
@@ -94,7 +96,7 @@
               <p class="lead">En este curso vas a crear tu propia mirada pedagógica inspirándote en las experiencias más innovadoras de transformación educativa.</p>
 <select name="OS" class="btn btn-primary" data-wow-delay="0.85s" onclick="$('#fh5co-download').goTo();return false;" onchange="location = this.value;">
 <option selected value="0"> COMIENZA AHORA </option>
-   <option value="/curso/argentina">Argentina - $1499</option> 
+   <option id="botonargentina" value="/curso/argentina">Argentina - $1499</option> 
    <option value="/curso/chile">Chile - $34900</option> 
    <option value="/curso/colombia">Colombia - $159000</option>
    <option value="/curso/mexico">México - $990</option> 
@@ -387,5 +389,16 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Derec
 
     
     <script src="js/main.js"></script>
+	
+<script type="text/javascript">
+document.getElementById('botonargentina').addEventListener('click', function() {
+  fbq('track', 'InitiateCheckout', {
+    value: 1499,
+    currency: 'ARS',
+  });
+...
+}, false);
+</script>
+
   </body>
 </html>

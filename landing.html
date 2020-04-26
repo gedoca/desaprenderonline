@@ -97,25 +97,25 @@
               <h1>APRENDÉ OTRAS MANERAS DE APRENDER</h1>
               <p class="lead">En este curso vas a crear tu propia mirada pedagógica inspirándote en las experiencias más innovadoras de transformación educativa.</p>
 <select id="botonpais" name="OS" class="btn btn-primary" data-wow-delay="0.85s" onclick="$('#fh5co-download').goTo();return false;" onchange="valorboton()">
-<option selected value="0"> ELIGE TU PAÍS </option>
-   <option value="https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=50942394-cf6328bf-ee4c-471a-8829-406070b57a19">Argentina - $1499</option> 
-   <option value="https://www.mercadopago.cl/checkout/v1/redirect?pref_id=549315199-157ddd84-661f-4674-b98c-489c516e590a">Chile - $34900</option> 
-   <option value="https://www.mercadopago.com.co/checkout/v1/redirect?pref_id=549349245-8fe6b022-6ab7-4f2f-bbae-c343bb485d75">Colombia - $159000</option>
-   <option value="https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=549217379-bf034686-c7b9-4cd8-9717-8558364731d1">México - $990</option> 
-   <option value="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ALNYSBGMAT2AE">Resto del Mundo - US$39</option>   
+<option selected value="TU PAÍS"> ELIGE TU PAÍS </option>
+   <option value="$ 1499|https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=50942394-cf6328bf-ee4c-471a-8829-406070b57a19">Argentina</option> 
+   <option value="$ 34900|https://www.mercadopago.cl/checkout/v1/redirect?pref_id=549315199-157ddd84-661f-4674-b98c-489c516e590a">Chile</option> 
+   <option value="$ 159000|https://www.mercadopago.com.co/checkout/v1/redirect?pref_id=549349245-8fe6b022-6ab7-4f2f-bbae-c343bb485d75">Colombia</option>
+   <option value="$ 990|https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=549217379-bf034686-c7b9-4cd8-9717-8558364731d1">México</option> 
+   <option value="US$ 39|https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ALNYSBGMAT2AE">Resto del Mundo</option>   
 </select>
 
 
-<a id="botoncompra" class="btn btn-primary" style="opacity: 0.4; color: #fff; margin-left: 10px;">COMENZAR AHORA</a>
+<a id="botoncompra" class="btn btn-primary" style="border-color: grey; background-color: grey; color: #fff; opacity: 1; margin: 10px;">COMENZAR AHORA</a>
 
 <script>
 function valorboton() {
   var x = document.getElementById("botonpais").value;
- document.getElementById("botoncompra").href = x;
-  document.getElementById("botoncompra").style.opacity = "1.0";
-
- 
-
+  y = x.split("|")
+  document.getElementById("botoncompra").href = y[1];
+  document.getElementById("botoncompra").style.backgroundColor = "#227f56";
+  document.getElementById("botoncompra").style.borderColor = "#227f56";
+  document.getElementById("botoncompra").innerHTML = "COMIENZA YÁ POR " + y[0];
 
 }
 </script>
@@ -358,14 +358,29 @@ function valorboton() {
             <p>Un proyecto de formación, consultoría y divulgación de La Educación Prohibida para conocer el amplio universo de la educación alternativa desde una perspectiva integral, crítica y constructiva.</p>
 
 <div class="mb-3 text-center">
-<select name="OS" class="btn btn-primary" data-wow-delay="0.85s" onclick="$('#fh5co-download').goTo();return false;" onchange="location = this.value;">
-<option selected value="0"> COMIENZA AHORA </option>
-   <option value="https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=50942394-cf6328bf-ee4c-471a-8829-406070b57a19">Argentina - $1499</option> 
-   <option value="https://www.mercadopago.cl/checkout/v1/redirect?pref_id=549315199-157ddd84-661f-4674-b98c-489c516e590a">Chile - $34900</option> 
-   <option value="https://www.mercadopago.com.co/checkout/v1/redirect?pref_id=549349245-8fe6b022-6ab7-4f2f-bbae-c343bb485d75">Colombia - $159000</option>
-   <option value="https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=549217379-bf034686-c7b9-4cd8-9717-8558364731d1">México - $990</option> 
-   <option value="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ALNYSBGMAT2AE">Resto del Mundo - US$39</option>   
+<select id="botonpais2" name="OS" class="btn btn-primary" data-wow-delay="0.85s" onclick="$('#fh5co-download').goTo();return false;" onchange="valorboton2()">
+<option selected value="TU PAÍS"> ELIGE TU PAÍS </option>
+   <option value="$ 1499|https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=50942394-cf6328bf-ee4c-471a-8829-406070b57a19">Argentina</option> 
+   <option value="$ 34900|https://www.mercadopago.cl/checkout/v1/redirect?pref_id=549315199-157ddd84-661f-4674-b98c-489c516e590a">Chile</option> 
+   <option value="$ 159000|https://www.mercadopago.com.co/checkout/v1/redirect?pref_id=549349245-8fe6b022-6ab7-4f2f-bbae-c343bb485d75">Colombia</option>
+   <option value="$ 990|https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=549217379-bf034686-c7b9-4cd8-9717-8558364731d1">México</option> 
+   <option value="US$ 39|https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ALNYSBGMAT2AE">Resto del Mundo</option>   
 </select>
+
+
+<a id="botoncompra2" class="btn btn-primary" style="border-color: grey; background-color: grey; color: #fff; opacity: 1; margin: 10px;">COMENZAR AHORA</a>
+
+<script>
+function valorboton2() {
+  var x = document.getElementById("botonpais2").value;
+  y = x.split("|")
+  document.getElementById("botoncompra2").href = y[1];
+  document.getElementById("botoncompra2").style.backgroundColor = "#227f56";
+  document.getElementById("botoncompra2").style.borderColor = "#227f56";
+  document.getElementById("botoncompra2").innerHTML = "COMIENZA YÁ POR " + y[0];
+
+}
+</script>
 </div>
           </div>
           <div class="col-md-6 ml-auto">

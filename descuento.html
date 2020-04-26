@@ -17,9 +17,42 @@
 
     <!-- Theme Style -->
     <link rel="stylesheet" href="css/style.css">
+	
+
   </head>
   <body>
     
+	
+	<!-- Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-162296781-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-162296781-1');
+</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2636975616558492');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=2636975616558492&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+	
+	
     <header role="banner">
      
       <nav class="navbar navbar-expand-md navbar-dark bg-light">
@@ -65,14 +98,33 @@
 
               <h1 id="horapromo"></h1>
               <p id="bajada" class="lead">Accedé a nuestro Curso Online Educación Alternativa en 8 Clases con un 30% de descuento por un tiempo limitado.</p>
-<select name="OS" class="btn btn-primary" data-wow-delay="0.85s" onclick="$('#fh5co-download').goTo();return false;" onchange="location = this.value;">
-<option id="comienza" selected value="0"> COMIENZA AHORA </option>
-   <option id="argentina" value="/curso/argentina">Argentina - $1499</option> 
-   <option id="chile" value="/curso/chile">Chile - $34900</option> 
-   <option id="colombia" value="/curso/colombia">Colombia - $159000</option>
-   <option id="mexico" value="/curso/mexico">México - $990</option> 
-   <option id="mundo" value="/curso/mundo">Resto del Mundo - US$39</option> 
+
+ 
+			  
+<select id="botonpais" name="OS" class="btn btn-primary" data-wow-delay="0.85s" onclick="$('#fh5co-download').goTo();return false;" onchange="valorboton()">
+<option id="comienza" selected value="TU PAÍS"> ELIGE TU PAÍS </option>
+   <option id="argentina" value="$ 1499|https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=50942394-cf6328bf-ee4c-471a-8829-406070b57a19">Argentina</option> 
+   <option id="chile" value="$ 34900|https://www.mercadopago.cl/checkout/v1/redirect?pref_id=549315199-157ddd84-661f-4674-b98c-489c516e590a">Chile</option> 
+   <option id="colombia" value="$ 159000|https://www.mercadopago.com.co/checkout/v1/redirect?pref_id=549349245-8fe6b022-6ab7-4f2f-bbae-c343bb485d75">Colombia</option>
+   <option id="mexico" value="$ 990|https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=549217379-bf034686-c7b9-4cd8-9717-8558364731d1">México</option> 
+   <option id="mundo" value="US$ 39|https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ALNYSBGMAT2AE">Resto del Mundo</option>   
 </select>
+
+
+
+<a id="botoncompra" class="btn btn-primary" style="border-color: grey; background-color: grey; color: #fff; opacity: 1; margin: 10px;">COMENZAR AHORA</a>
+
+<script>
+function valorboton() {
+  var x = document.getElementById("botonpais").value;
+  y = x.split("|")
+  document.getElementById("botoncompra").href = y[1];
+  document.getElementById("botoncompra").style.backgroundColor = "#227f56";
+  document.getElementById("botoncompra").style.borderColor = "#227f56";
+  document.getElementById("botoncompra").innerHTML = "COMIENZA YÁ POR " + y[0];
+
+}
+</script>
 
             </div>
 
@@ -312,14 +364,29 @@
             <p>Un proyecto de formación, consultoría y divulgación de La Educación Prohibida para conocer el amplio universo de la educación alternativa desde una perspectiva integral, crítica y constructiva.</p>
 
 <div class="mb-3 text-center">
-<select name="OS" class="btn btn-primary" data-wow-delay="0.85s" onclick="$('#fh5co-download').goTo();return false;" onchange="location = this.value;">
-<option selected value="0"> COMIENZA AHORA </option>
-   <option value="/curso/argentina">Argentina - $1499</option> 
-   <option value="/curso/chile">Chile - $34900</option> 
-   <option value="/curso/colombia">Colombia - $159000</option>
-   <option value="/curso/mexico">México - $990</option> 
-   <option value="/curso/mundo">Resto del Mundo - US$39</option> 
+<select id="botonpais2" name="OS" class="btn btn-primary" data-wow-delay="0.85s" onclick="$('#fh5co-download').goTo();return false;" onchange="valorboton2()">
+<option selected value="TU PAÍS"> ELIGE TU PAÍS </option>
+   <option value="$ 1499|https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=50942394-cf6328bf-ee4c-471a-8829-406070b57a19">Argentina</option> 
+   <option value="$ 34900|https://www.mercadopago.cl/checkout/v1/redirect?pref_id=549315199-157ddd84-661f-4674-b98c-489c516e590a">Chile</option> 
+   <option value="$ 159000|https://www.mercadopago.com.co/checkout/v1/redirect?pref_id=549349245-8fe6b022-6ab7-4f2f-bbae-c343bb485d75">Colombia</option>
+   <option value="$ 990|https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=549217379-bf034686-c7b9-4cd8-9717-8558364731d1">México</option> 
+   <option value="US$ 39|https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ALNYSBGMAT2AE">Resto del Mundo</option>   
 </select>
+
+
+<a id="botoncompra2" class="btn btn-primary" style="border-color: grey; background-color: grey; color: #fff; opacity: 1; margin: 10px;">COMENZAR AHORA</a>
+
+<script>
+function valorboton2() {
+  var x = document.getElementById("botonpais2").value;
+  y = x.split("|")
+  document.getElementById("botoncompra2").href = y[1];
+  document.getElementById("botoncompra2").style.backgroundColor = "#227f56";
+  document.getElementById("botoncompra2").style.borderColor = "#227f56";
+  document.getElementById("botoncompra2").innerHTML = "COMIENZA YÁ POR " + y[0];
+
+}
+</script>
 </div>
           </div>
           <div class="col-md-6 ml-auto">
@@ -388,16 +455,16 @@ var x = setInterval(function() {
   
   // If the count down is over, write some text 
     document.getElementById("comienza").innerHTML = "30% OFF";
-  document.getElementById("argentina").innerHTML = "Argentina - $1049";
-  document.getElementById("chile").innerHTML = "Chile - $27900";
-  document.getElementById("colombia").innerHTML = "Colombia - $111000";
-  document.getElementById("mexico").innerHTML = "México - $690";
-  document.getElementById("mundo").innerHTML = "Resto del Mundo - US$27";
-  document.getElementById("argentina").value = "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=50942394-3ea248b8-2089-4c47-864d-aad3e2a2ea76";
-  document.getElementById("chile").value = "https://www.mercadopago.cl/checkout/v1/redirect?pref_id=549315199-74644233-5b31-4383-9c10-56a93c5b00a3";
-  document.getElementById("colombia").value = "https://www.mercadopago.com.co/checkout/v1/redirect?pref_id=549349245-729b4f65-0b1e-491b-a969-86c3fd643f11";
-  document.getElementById("mexico").value = "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=549217379-f9563a51-494b-4b4c-9596-b49cd7bff02d";
-  document.getElementById("mundo").value = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3FY23REHENPPN";
+  document.getElementById("argentina").innerHTML = "Argentina";
+  document.getElementById("chile").innerHTML = "Chile";
+  document.getElementById("colombia").innerHTML = "Colombia";
+  document.getElementById("mexico").innerHTML = "México";
+  document.getElementById("mundo").innerHTML = "Resto del Mundo";
+  document.getElementById("argentina").value = "$ 1049|https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=50942394-3ea248b8-2089-4c47-864d-aad3e2a2ea76";
+  document.getElementById("chile").value = "$ 27900|https://www.mercadopago.cl/checkout/v1/redirect?pref_id=549315199-74644233-5b31-4383-9c10-56a93c5b00a3";
+  document.getElementById("colombia").value = "$ 111000|https://www.mercadopago.com.co/checkout/v1/redirect?pref_id=549349245-729b4f65-0b1e-491b-a969-86c3fd643f11";
+  document.getElementById("mexico").value = "$ 690|https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=549217379-f9563a51-494b-4b4c-9596-b49cd7bff02d";
+  document.getElementById("mundo").value = "US$ 27|https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3FY23REHENPPN";
   
   // If the count down is over, write some text 
   if (distance < 0) {
@@ -405,22 +472,24 @@ var x = setInterval(function() {
         document.getElementById("comienza").innerHTML = "COMIENZA AHORA";
     document.getElementById("horapromo").innerHTML = "APRENDÉ OTRAS MANERAS DE <span class='texto-animado'></span>";
         document.getElementById("bajada").innerHTML = "El tiempo para realizar el curso con un descuento especial ha finalizado. Presta atención a los próximos descuentos en nuestras redes sociales.";
-  document.getElementById("argentina").innerHTML = "Argentina - $1499";
-  document.getElementById("chile").innerHTML = "Chile - $34900";
-  document.getElementById("colombia").innerHTML = "Colombia - $159000";
-  document.getElementById("mexico").innerHTML = "México - $990";
-  document.getElementById("mundo").innerHTML = "Resto del Mundo - US$39";
-    document.getElementById("argentina").value = "https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=50942394-cf6328bf-ee4c-471a-8829-406070b57a19";
-  document.getElementById("chile").value = "https://www.mercadopago.cl/checkout/v1/redirect?pref_id=549315199-157ddd84-661f-4674-b98c-489c516e590a";
-  document.getElementById("colombia").value = "https://www.mercadopago.com.co/checkout/v1/redirect?pref_id=549349245-8fe6b022-6ab7-4f2f-bbae-c343bb485d75";
-  document.getElementById("mexico").value = "https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=549217379-bf034686-c7b9-4cd8-9717-8558364731d1";
-  document.getElementById("mundo").value = "https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ALNYSBGMAT2AE";
+  document.getElementById("argentina").innerHTML = "Argentina";
+  document.getElementById("chile").innerHTML = "Chile";
+  document.getElementById("colombia").innerHTML = "Colombia";
+  document.getElementById("mexico").innerHTML = "México";
+  document.getElementById("mundo").innerHTML = "Resto del Mundo";
+    document.getElementById("argentina").value = "$ 1499|https://www.mercadopago.com.ar/checkout/v1/redirect?pref_id=50942394-cf6328bf-ee4c-471a-8829-406070b57a19";
+  document.getElementById("chile").value = "$ 34900|https://www.mercadopago.cl/checkout/v1/redirect?pref_id=549315199-157ddd84-661f-4674-b98c-489c516e590a";
+  document.getElementById("colombia").value = "$ 159000https://www.mercadopago.com.co/checkout/v1/redirect?pref_id=549349245-8fe6b022-6ab7-4f2f-bbae-c343bb485d75";
+  document.getElementById("mexico").value = "$ 990|https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=549217379-bf034686-c7b9-4cd8-9717-8558364731d1";
+  document.getElementById("mundo").value = "US$ 39|https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ALNYSBGMAT2AE";
     }
     
 }, 1000);
 
 
 </script>
+
+
 
 
   </body>

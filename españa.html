@@ -94,7 +94,34 @@
               <h1>APRENDÉ OTRAS MANERAS DE APRENDER</h1>
               <p class="lead">En este curso vas a crear tu propia mirada pedagógica inspirándote en las experiencias más innovadoras de transformación educativa.</p>
 
-<a id="botoncompra" class="btn btn-primary" style=" color: #fff; opacity: 1; margin: 10px;" href="https://www.mercadopago.com.co/checkout/v1/redirect?pref_id=549349245-8fe6b022-6ab7-4f2f-bbae-c343bb485d75">COMENZAR YÁ POR $ 109900 <s>$159000</s></a>
+<div id="botoncompra" class="btn btn-primary" style=" color: #fff; opacity: 1; margin: 10px;">COMENZAR YÁ POR €34,99</div>
+<div id="paypal-button-container"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=sb&currency=EUR" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'rect',
+          color: 'silver',
+          layout: 'vertical',
+          label: 'pay',
+          
+      },
+      createOrder: function(data, actions) {
+          return actions.order.create({
+              purchase_units: [{
+                  amount: {
+                      value: '34.99'
+                  }
+              }]
+          });
+      },
+      onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+              alert('Transaction completed by ' + details.payer.name.given_name + '!');
+          });
+      }
+  }).render('#paypal-button-container');
+</script>
 
 
             </div>

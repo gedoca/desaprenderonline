@@ -645,6 +645,18 @@ section.lazy-placeholder:after {
     text-align: center;
   }
 }
+.cid-s3YTONttiu {
+  background: #ffffff;
+}
+.cid-s3YTONttiu .video-block {
+  margin: auto;
+  width: 100% !important;
+}
+@media (max-width: 768px) {
+  .cid-s3YTONttiu .video-block {
+    width: 100% !important;
+  }
+}
 .cid-qU8iNJprqJ {
   padding-top: 90px;
   padding-bottom: 90px;

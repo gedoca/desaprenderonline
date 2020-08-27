@@ -51,6 +51,12 @@
             onApprove: function(data, actions) {
                 return actions.order.capture().then(function(details) {
                     // Show a success message to the buyer
+					let estatus = details.purchase_units[0].payments.captures[0].status; //este valor guarda el estatus de la transacción
+					if (estatus == 'COMPLETED'){ //este 'if' manda al cliente a la página de confirmación de compra
+					location.href = 'http://desaprenderonline.com/curso/unidades'; 
+					} else { //si el pago no es exitoso el clente es redirijido a este otro sitio
+					location.href = 'http://desaprenderonline.com/curso/error';
+					}
                     alert('Transaction completed by ' + details.payer.name.given_name + '!');
                 });
             }

@@ -76,7 +76,7 @@ src="https://www.facebook.com/tr?id=2210428312595198&ev=PageView&noscript=1"
                     <h2 class="mbr-title pt-2 mbr-fonts-style display-2">¡Estás a 3 pasos de comenzar!</h2>
                     <div class="mbr-section-text">
                         
-                        <p class="mbr-text text2 pt-4 mbr-light mbr-fonts-style display-2"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=F9ZLTRVXKTR3J" target="_blank">€ 34,99</a> &nbsp;<span class="cost">€ 59</span></p>
+                        <p class="mbr-text text2 pt-4 mbr-light mbr-fonts-style display-2">€ 34,99 &nbsp;<span class="cost">€ 59</span></p>
                     </div>
 					
 					
@@ -85,8 +85,7 @@ src="https://www.facebook.com/tr?id=2210428312595198&ev=PageView&noscript=1"
                 </div>
 			</div>
 			
-				 <div id="paypal-button-container"></div>
-<div id="paypal-button-container"></div>
+			<div id="paypal-button-container"  class="media-container-row"></div>
 <script src="https://www.paypal.com/sdk/js?client-id=Acq56A6nT5LgFk8KdpejbSeTuDo6EfkqnTJpeUlCHpE1J4gHHUaValcFQk58x07MpiKB0AP5RpXH8pVR&currency=EUR" data-sdk-integration-source="button-factory"></script>
 <script>
   paypal.Buttons({
@@ -101,14 +100,14 @@ src="https://www.facebook.com/tr?id=2210428312595198&ev=PageView&noscript=1"
           return actions.order.create({
               purchase_units: [{
                   amount: {
-                      value: '34'
+                      value: '34.99'
                   }
               }]
           });
       },
       onApprove: function(data, actions) {
           return actions.order.capture().then(function(details) {
-		  // Show a success message to the buyer
+		  		  // Show a success message to the buyer
 					let estatus = details.purchase_units[0].payments.captures[0].status; //este valor guarda el estatus de la transacción
 					if (estatus == 'COMPLETED'){ //este 'if' manda al cliente a la página de confirmación de compra
 					location.href = 'http://desaprenderonline.com/curso/unidades'; 

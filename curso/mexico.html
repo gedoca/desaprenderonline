@@ -79,14 +79,51 @@ src="https://www.facebook.com/tr?id=2210428312595198&ev=PageView&noscript=1"
                             $690 &nbsp;<span class="cost">$990</span></p>
                     </div>
                     <!--Btn-->
-                    <div class="mbr-section-btn pt-3 align-left"><a href="https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=549217379-bf034686-c7b9-4cd8-9717-8558364731d1" class="btn btn-primary display-4" target="_blank">COMPRAR AHORA</a></div>
+
                 </div>
             </div>
+			
+			
+			<div id="paypal-button-container"  class="media-container-row"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=Acq56A6nT5LgFk8KdpejbSeTuDo6EfkqnTJpeUlCHpE1J4gHHUaValcFQk58x07MpiKB0AP5RpXH8pVR&currency=MXN" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'rect',
+          color: 'silver',
+          layout: 'vertical',
+          label: 'pay',
+          
+      },
+      createOrder: function(data, actions) {
+          return actions.order.create({
+              purchase_units: [{
+                  amount: {
+                      value: '690'
+                  }
+              }]
+          });
+      },
+      onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+		  		  // Show a success message to the buyer
+					let estatus = details.purchase_units[0].payments.captures[0].status; //este valor guarda el estatus de la transacción
+					if (estatus == 'COMPLETED'){ //este 'if' manda al cliente a la página de confirmación de compra
+					location.href = 'http://desaprenderonline.com/curso/unidades'; 
+					} else { //si el pago no es exitoso el clente es redirijido a este otro sitio
+					location.href = 'http://desaprenderonline.com/curso/error';
+					}
+              alert('Transaction completed by ' + details.payer.name.given_name + '!');
+          });
+      }
+  }).render('#paypal-button-container');
+</script>
+		<a href="https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=549217379-bf034686-c7b9-4cd8-9717-8558364731d1" class="media-container-row display-7" target="_blank" >Si no tienes tarjeta de crédito/débito haz click aqui</a>
         </div>
     </div>
 </section>
 
-<section class="engine"><a href="https://mobirise.info/w">html5 templates</a></section><section class="features18 popup-btn-cards cid-rWCp3DS1II mbr-parallax-background" id="features18-4h">
+<section class="engine"><a href="https://mobirise.info/c">free web builder</a></section><section class="features18 popup-btn-cards cid-rWCp3DS1II mbr-parallax-background" id="features18-4h">
 
     
 
@@ -103,8 +140,8 @@ src="https://www.facebook.com/tr?id=2210428312595198&ev=PageView&noscript=1"
                         <img src="assets/images/81183fa0-8160-4576-b779-7df73329d88d-676x380.png" alt="Mobirise" title="">
                     </div>
                     <div class="card-box">
-                        <h4 class="card-title mbr-fonts-style display-7"><a href="https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=549217379-bf034686-c7b9-4cd8-9717-8558364731d1" target="_blank">Confirma tu Pago&nbsp;aqui</a></h4>
-                        <p class="mbr-text mbr-fonts-style align-left display-7">El sistema de pagos Mercado Pago México te ofrecerá diferentes medios de pago, desde tarjetas de crédito, debito, prepaga, efectivo en casas de pago o transferencia electrónica.<br><strong><a href="https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=549217379-bf034686-c7b9-4cd8-9717-8558364731d1" target="_blank">REALIZA TU PAGO AQUÍ</a></strong></p>
+                        <h4 class="card-title mbr-fonts-style display-7"><a href="" target="_blank">Realiza tu pago</a></h4>
+                        <p class="mbr-text mbr-fonts-style align-left display-7">El sistema de pagos te pedirá tarjeta de crédito o débito. Si no tienes, puedes realizar tu pago vía MercadoPago con otras opciones.<br><strong><a href="https://www.mercadopago.com.mx/checkout/v1/redirect?pref_id=549217379-bf034686-c7b9-4cd8-9717-8558364731d1" target="_blank">Ingresa a Mercado Pago</a></strong></p>
                     </div>
                 </div>
             </div>

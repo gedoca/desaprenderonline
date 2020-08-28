@@ -82,6 +82,42 @@ src="https://www.facebook.com/tr?id=2210428312595198&ev=PageView&noscript=1"
                     
                 </div>
             </div>
+			<div id="paypal-button-container"  class="media-container-row"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=Acq56A6nT5LgFk8KdpejbSeTuDo6EfkqnTJpeUlCHpE1J4gHHUaValcFQk58x07MpiKB0AP5RpXH8pVR&currency=USD" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'rect',
+          color: 'silver',
+          layout: 'vertical',
+          label: 'pay',
+          
+      },
+      createOrder: function(data, actions) {
+          return actions.order.create({
+              purchase_units: [{
+                  amount: {
+                      value: '39'
+                  }
+              }]
+          });
+      },
+      onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+		  		  // Show a success message to the buyer
+					let estatus = details.purchase_units[0].payments.captures[0].status; //este valor guarda el estatus de la transacción
+					if (estatus == 'COMPLETED'){ //este 'if' manda al cliente a la página de confirmación de compra
+					location.href = 'http://desaprenderonline.com/curso/unidades'; 
+					} else { //si el pago no es exitoso el clente es redirijido a este otro sitio
+					location.href = 'http://desaprenderonline.com/curso/error';
+					}
+              alert('Transaction completed by ' + details.payer.name.given_name + '!');
+          });
+      }
+  }).render('#paypal-button-container');
+</script>
+			
+			
         </div>
     </div>
 </section>
@@ -101,13 +137,13 @@ src="https://www.facebook.com/tr?id=2210428312595198&ev=PageView&noscript=1"
                 <div class="card-wrapper ">
                     <div class="card-img">
                         <div class="mbr-overlay"></div>
-                        <div class="mbr-section-btn text-center"><a href="http://desaprenderonline.com/pagos/payment.html?YW1vdW50PTM5JmlkPUN1cnNvIE9ubGluZSBFZHVjYWNp824gQWx0ZXJuYXRpdmEgZW4gOCBDbGFzZXM=" class="btn btn-secondary display-1" target="_blank">1</a></div>
+                        <div class="mbr-section-btn text-center"><a href="" class="btn btn-secondary display-1" target="_blank">1</a></div>
                         <img src="assets/images/888151f8-a6f6-4385-b12d-92e5ea57263a-676x380.png" alt="Mobirise" title="">
                     </div>
                     <div class="card-box">
                         <h4 class="card-title mbr-fonts-style display-7">Realiza tu pago con tarjeta de crédito via Paypal</h4>
                         <p class="mbr-text mbr-fonts-style align-left display-7">Puedes optar por realizar el pago con tarjeta de crédito via Paypal. &nbsp;Si no tienes usuario, el sistema de pagos Paypal te pedirá que crees uno. Es un proceso muy sencillo.
-<br><strong><a href="http://desaprenderonline.com/pagos/payment.html?YW1vdW50PTM5JmlkPUN1cnNvIE9ubGluZSBFZHVjYWNp824gQWx0ZXJuYXRpdmEgZW4gOCBDbGFzZXM=" target="_blank">IR A PAYPAL AHORA</a></strong></p>
+
                     </div>
                 </div>
             </div>

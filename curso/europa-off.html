@@ -6,15 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Mobirise v4.12.3, mobirise.com">
   <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:image:src" content="assets/images/mundo-meta.png">
-  <meta property="og:image" content="assets/images/mundo-meta.png">
-  <meta name="twitter:title" content="Inscribirme desde otros paises">
+  <meta name="twitter:image:src" content="assets/images/europa-meta.png">
+  <meta property="og:image" content="assets/images/europa-meta.png">
+  <meta name="twitter:title" content="Inscribirme desde Europa">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="assets/images/logo-128x128.png" type="image/x-icon">
   <meta name="description" content="Participa del Curso Online Educación Alternativa en 8 clases desde cualquier lugar del mundo.">
   
   
-  <title>Inscribirme desde otros paises</title>
+  <title>Inscribirme desde Europa</title>
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
@@ -59,7 +59,7 @@ src="https://www.facebook.com/tr?id=2210428312595198&ev=PageView&noscript=1"
 <!-- /Analytics -->
 
 
-  <section class="services2 cid-rWI1ebhm5r" id="services2-4y">
+  <section class="services2 cid-s1rxaJULz7" id="services2-52">
     <!---->
     
     <!---->
@@ -76,17 +76,55 @@ src="https://www.facebook.com/tr?id=2210428312595198&ev=PageView&noscript=1"
                     <h2 class="mbr-title pt-2 mbr-fonts-style display-2">¡Estás a 3 pasos de comenzar!</h2>
                     <div class="mbr-section-text">
                         
-                        <p class="mbr-text text2 pt-4 mbr-light mbr-fonts-style display-2"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=67WFPNEUZGV76">us$39</a> &nbsp;<span class="cost">us$69</span></p>
+                        <p class="mbr-text text2 pt-4 mbr-light mbr-fonts-style display-2">€ 24,40 &nbsp;<span class="cost">€ 34,99</span></p>
                     </div>
-                    <!--Btn-->
-                    
+					
+					
+                   
+
                 </div>
-            </div>
+			</div>
+			
+			<div id="paypal-button-container"  class="media-container-row"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=Acq56A6nT5LgFk8KdpejbSeTuDo6EfkqnTJpeUlCHpE1J4gHHUaValcFQk58x07MpiKB0AP5RpXH8pVR&currency=EUR" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'rect',
+          color: 'silver',
+          layout: 'vertical',
+          label: 'pay',
+          
+      },
+      createOrder: function(data, actions) {
+          return actions.order.create({
+              purchase_units: [{
+                  amount: {
+                      value: '24.40'
+                  }
+              }]
+          });
+      },
+      onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+		  		  // Show a success message to the buyer
+					let estatus = details.purchase_units[0].payments.captures[0].status; //este valor guarda el estatus de la transacción
+					if (estatus == 'COMPLETED'){ //este 'if' manda al cliente a la página de confirmación de compra
+					location.href = 'http://desaprenderonline.com/curso/unidades'; 
+					} else { //si el pago no es exitoso el clente es redirijido a este otro sitio
+					location.href = 'http://desaprenderonline.com/curso/error';
+					}
+              alert('Transaction completed by ' + details.payer.name.given_name + '!');
+          });
+      }
+  }).render('#paypal-button-container');
+</script>
+
         </div>
     </div>
 </section>
 
-<section class="features18 popup-btn-cards cid-rO9IfyyLXV mbr-parallax-background" id="features18-32">
+<section class="engine"><a href="https://mobirise.info/i">free website creation software</a></section><section class="features18 popup-btn-cards cid-s1rxaLkvGh mbr-parallax-background" id="features18-53">
 
     
 
@@ -99,20 +137,14 @@ src="https://www.facebook.com/tr?id=2210428312595198&ev=PageView&noscript=1"
                 <div class="card-wrapper ">
                     <div class="card-img">
                         <div class="mbr-overlay"></div>
-                        <div class="mbr-section-btn text-center"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ALNYSBGMAT2AE" class="btn btn-secondary display-1" target="_blank">1</a></div>
+                        <div class="mbr-section-btn text-center"><a href="" class="btn btn-secondary display-1" target="_blank">1</a></div>
                         <img src="assets/images/888151f8-a6f6-4385-b12d-92e5ea57263a-676x380.png" alt="Mobirise" title="">
                     </div>
                     <div class="card-box">
                         <h4 class="card-title mbr-fonts-style display-7">Realiza tu pago con tarjeta de crédito via Paypal</h4>
-                        <p class="mbr-text mbr-fonts-style align-left display-7">Puedes optar por realizar el pago con tarjeta de crédito via Paypal. &nbsp;Si no tienes usuario, el sistema de pagos Paypal te pedirá que crees uno. Es un proceso muy sencillo.
-<br>
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="67WFPNEUZGV76">
-<input type="image" src="https://www.paypalobjects.com/es_XC/AR/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
-</form>
-</p>
+                        <p class="mbr-text mbr-fonts-style align-left display-7">Realizar el pago con tu saldo o tarjeta de crédito via Paypal en nuestro sitio web.
+						
+
                     </div>
                 </div>
             </div>
@@ -150,7 +182,7 @@ src="https://www.facebook.com/tr?id=2210428312595198&ev=PageView&noscript=1"
     </div>
 </section>
 
-<section class="mbr-section info1 cid-ri7oLpli5f" id="info1-1z">
+<section class="mbr-section info1 cid-s1rxaOpBRY" id="info1-54">
 
     
 
@@ -169,7 +201,7 @@ src="https://www.facebook.com/tr?id=2210428312595198&ev=PageView&noscript=1"
     </div>
 </section>
 
-<section once="" class="cid-ri7n7cB8vN" id="footer7-1x">
+<section once="" class="cid-s1rxaPSh3E" id="footer7-55">
 
     
 

@@ -5,12 +5,16 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="Mobirise v4.12.3, mobirise.com">
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image:src" content="assets/images/mundo-meta.png">
+  <meta property="og:image" content="assets/images/mundo-meta.png">
+  <meta name="twitter:title" content="Inscribirme desde otros paises">
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <link rel="shortcut icon" href="assets/images/logo-128x128.png" type="image/x-icon">
-  <meta name="description" content="">
+  <meta name="description" content="Participa del Curso Online Educación Alternativa en 8 clases desde cualquier lugar del mundo.">
   
   
-  <title>Pago Paypal</title>
+  <title>Inscribirme desde otros paises</title>
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
@@ -55,78 +59,129 @@ src="https://www.facebook.com/tr?id=2210428312595198&ev=PageView&noscript=1"
 <!-- /Analytics -->
 
 
-  <section class="features18 popup-btn-cards cid-rO9IfyyLXV" id="features18-32">
+  <section class="services2 cid-rWI1ebhm5r" id="services2-4y">
+    <!---->
+    
+    <!---->
+    <!--Overlay-->
+    
+    <!--Container-->
+    <div class="container">
+        <div class="col-md-12">
+            <div class="media-container-row">
+                <div class="mbr-figure" style="width: 45%;">
+                    <img src="assets/images/image823-914x442.png" alt="Mobirise" title="">
+                </div>
+                <div class="align-left aside-content">
+                    <h2 class="mbr-title pt-2 mbr-fonts-style display-2">¡Estás a 3 pasos de comenzar!</h2>
+                    <div class="mbr-section-text">
+                        
+                        <p class="mbr-text text2 pt-4 mbr-light mbr-fonts-style display-2">us$27 &nbsp;<span class="cost">us$39</span></p>
+                    </div>
+                    <!--Btn-->
+                    
+                </div>
+            </div>
+			<div id="paypal-button-container"  class="media-container-row"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=Acq56A6nT5LgFk8KdpejbSeTuDo6EfkqnTJpeUlCHpE1J4gHHUaValcFQk58x07MpiKB0AP5RpXH8pVR&currency=USD" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'rect',
+          color: 'silver',
+          layout: 'vertical',
+          label: 'pay',
+          
+      },
+      createOrder: function(data, actions) {
+          return actions.order.create({
+              purchase_units: [{
+                  amount: {
+                      value: '27'
+                  }
+              }]
+          });
+      },
+      onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+		  		  // Show a success message to the buyer
+					let estatus = details.purchase_units[0].payments.captures[0].status; //este valor guarda el estatus de la transacción
+					if (estatus == 'COMPLETED'){ //este 'if' manda al cliente a la página de confirmación de compra
+					location.href = 'http://desaprenderonline.com/curso/unidades'; 
+					} else { //si el pago no es exitoso el clente es redirijido a este otro sitio
+					location.href = 'http://desaprenderonline.com/curso/error';
+					}
+              alert('Transaction completed by ' + details.payer.name.given_name + '!');
+          });
+      }
+  }).render('#paypal-button-container');
+</script>
+			
+			
+        </div>
+    </div>
+</section>
+
+
+
+<section class="features18 popup-btn-cards cid-rO9IfyyLXV mbr-parallax-background" id="features18-32">
 
     
 
     
     <div class="container">
-        <h2 class="mbr-section-title pb-3 align-center mbr-fonts-style display-2">¡Estás a 3 pasos de comenzar!</h2>
+        
         
         <div class="media-container-row pt-5 ">
-            <div class="card p-3 col-12 col-md-6 col-lg-3">
+            <div class="card p-3 col-12 col-md-6 col-lg-4">
                 <div class="card-wrapper ">
                     <div class="card-img">
                         <div class="mbr-overlay"></div>
-                        <div class="mbr-section-btn text-center"><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ALNYSBGMAT2AE" class="btn btn-secondary display-1" target="_blank">1a</a></div>
+                        <div class="mbr-section-btn text-center"><a href="" class="btn btn-secondary display-1" target="_blank">1</a></div>
                         <img src="assets/images/888151f8-a6f6-4385-b12d-92e5ea57263a-676x380.png" alt="Mobirise" title="">
                     </div>
                     <div class="card-box">
                         <h4 class="card-title mbr-fonts-style display-7">Realiza tu pago con tarjeta de crédito via Paypal</h4>
                         <p class="mbr-text mbr-fonts-style align-left display-7">Puedes optar por realizar el pago con tarjeta de crédito via Paypal. &nbsp;Si no tienes usuario, el sistema de pagos Paypal te pedirá que crees uno. Es un proceso muy sencillo.
-<br><strong><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ALNYSBGMAT2AE" target="_blank">IR A PAYPAL AHORA</a></strong></p>
+
                     </div>
                 </div>
             </div>
-            <div class="card p-3 col-12 col-md-6 col-lg-3">
+            <div class="card p-3 col-12 col-md-6 col-lg-4">
                 <div class="card-wrapper">
                     <div class="card-img">
                         <div class="mbr-overlay"></div>
-                        <div class="mbr-section-btn text-center"><a href="https://mobirise.com" class="btn btn-info display-1">1b</a></div>
+                        <div class="mbr-section-btn text-center"><a href="http://wa.me/5491142970879" class="btn btn-info display-1" target="_blank">2</a></div>
                         <img src="assets/images/whatsapp-image-2020-02-05-at-16.12.52-492x277.jpg" alt="Mobirise" title="">
                     </div>
                     <div class="card-box">
-                        <h4 class="card-title mbr-fonts-style display-7">Realiza tu pago en efectivo via WesternUnion</h4>
-                        <p class="mbr-text mbr-fonts-style display-7">Puedes optar por realizar el pago enviando dinero via Western Union.<br>Escríbenos via Whatsapp<br> al <a href="http://wa.me/5491142970879" target="_blank">5491142970879</a> para solicitar la información necesaria para realizar el envio.&nbsp;<br></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card p-3 col-12 col-md-6 col-lg-3">
-                <div class="card-wrapper">
-                    <div class="card-img">
-                        <div class="mbr-overlay"></div>
-                        <div class="mbr-section-btn text-center"><a href=" " class="btn btn-info display-1">2</a></div>
-                        <img src="assets/images/85967950-d88f-4b09-ac36-02cb06bd577d-1-676x380.png" alt="Mobirise" title="">
-                    </div>
-                    <div class="card-box">
                         <h4 class="card-title mbr-fonts-style display-7">Recibe el link del grupo</h4>
-                        <p class="mbr-text mbr-fonts-style display-7">Una vez realizado el pago exitosamente el sitio te dirigirá al grupo donde funciona el curso para darte acceso.
-<br>Si no lo hace automáticamente puedes escribirnos via Whatsapp al <a href="http://wa.me/5491142970879" target="_blank">5491142970879</a>.</p>
+                        <p class="mbr-text mbr-fonts-style display-7">Una vez realizado el pago exitosamente el sitio te dirigirá al grupo donde funciona el curso para darte acceso. 
+<br>Si no lo hace automáticamente puedes escribirnos via Whatsapp al <a href="http://wa.me/5491142970879" target="_blank">5491142970879</a><br><br></p>
                     </div>
                 </div>
             </div>
 
-            <div class="card p-3 col-12 col-md-6 col-lg-3">
+            <div class="card p-3 col-12 col-md-6 col-lg-4">
                 <div class="card-wrapper">
                     <div class="card-img">
                         <div class="mbr-overlay"></div>
                         <div class="mbr-section-btn text-center"><a href=" " class="btn btn-info display-1">3</a></div>
-                        <img src="assets/images/vlcsnap-2020-01-04-10h56m20s638-676x380.png" alt="Mobirise" title="">
+                        <img src="assets/images/85967950-d88f-4b09-ac36-02cb06bd577d-1-676x380.png" alt="Mobirise" title="">
                     </div>
                     <div class="card-box">
                         <h4 class="card-title mbr-fonts-style display-7">¡Mira las clases!</h4>
-                        <p class="mbr-text mbr-fonts-style display-7">
-                           Ya dentro del grupo podrás ver en los apartados de Unidades todas las clases en video, materiales y foros de consulta.  Siempre que lo necesites puedes escribirnos via Whatsapp para recibir ayuda.
-                        </p>
+                        <p class="mbr-text mbr-fonts-style display-7">Ya dentro del grupo podrás ver en los apartados de Unidades todas las clases en video, materiales y foros de consulta. Siempre que lo necesites puedes escribirnos via Whatsapp para recibir ayuda.</p>
                     </div>
                 </div>
             </div>
+
+            
         </div>
     </div>
 </section>
 
-<section class="engine"><a href="https://mobirise.info/o">portfolio site templates</a></section><section class="mbr-section info1 cid-ri7oLpli5f" id="info1-1z">
+<section class="mbr-section info1 cid-ri7oLpli5f" id="info1-1z">
 
     
 
@@ -149,7 +204,7 @@ src="https://www.facebook.com/tr?id=2210428312595198&ev=PageView&noscript=1"
 
     
 
-    
+    <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(60, 60, 60);"></div>
 
     <div class="container">
         <div class="media-container-row align-center mbr-white">
@@ -195,6 +250,7 @@ src="https://www.facebook.com/tr?id=2210428312595198&ev=PageView&noscript=1"
   <script src="assets/tether/tether.min.js"></script>
   <script src="assets/smoothscroll/smooth-scroll.js"></script>
   <script src="assets/mbr-popup-btns/mbr-popup-btns.js"></script>
+  <script src="assets/parallax/jarallax.min.js"></script>
   <script src="assets/theme/js/script.js"></script>
   
   

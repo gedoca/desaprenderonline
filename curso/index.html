@@ -430,28 +430,28 @@ function valorboton() {
                 </div>
                 <div class="mbr-section-btn">
 				
-				<select id="botonpais" name="OS" class="btn btn-primary display-4" data-wow-delay="0.85s" onclick="$('#fh5co-download').goTo();return false;" onchange="valorboton()">
-<option id="comienza" selected value="TU PAÍS"> ELIGE TU PAÍS </option>
-   <option id="argentina" value="$ 1499|http://desaprenderonline.com/curso/argentina">Argentina</option> 
-   <option id="chile" value="$ 27900|http://desaprenderonline.com/curso/chile">Chile</option> 
-   <option id="colombia" value="$ 109000|http://desaprenderonline.com/curso/colombia">Colombia</option>
-   <option id="mexico" value="$ 690|http://desaprenderonline.com/curso/mexico">México</option> 
-         <option id="mundo" value="€ 34,9|http://desaprenderonline.com/curso/europa">Europa</option>  
-   <option id="mundo" value="US$ 39|http://desaprenderonline.com/curso/mundo">Resto del Mundo</option>   
+				<select id="botonpais2" name="OS" class="btn btn-primary display-4" data-wow-delay="0.85s" onclick="$('#fh5co-download').goTo();return false;" onchange="valorboton2()">
+<option id="comienza2" selected value="TU PAÍS"> ELIGE TU PAÍS </option>
+   <option id="argentina2" value="$ 1499|http://desaprenderonline.com/curso/argentina">Argentina</option> 
+   <option id="chile2" value="$ 27900|http://desaprenderonline.com/curso/chile">Chile</option> 
+   <option id="colombia2" value="$ 109000|http://desaprenderonline.com/curso/colombia">Colombia</option>
+   <option id="mexico2" value="$ 690|http://desaprenderonline.com/curso/mexico">México</option> 
+         <option id="mundo2" value="€ 34,9|http://desaprenderonline.com/curso/europa">Europa</option>  
+   <option id="mundo2" value="US$ 39|http://desaprenderonline.com/curso/mundo">Resto del Mundo</option>   
 </select>
 
 
 
-<a id="botoncompra" class="btn btn-primary display-4" style="border-color: grey; background-color: grey; color: #fff; opacity: 1; margin: 10px; padding: 20px;"> COMENZAR</a>
+<a id="botoncompra2" class="btn btn-primary display-4" style="border-color: grey; background-color: grey; color: #fff; opacity: 1; margin: 10px; padding: 20px;"> COMENZAR</a>
 
 <script>
-function valorboton() {
-  var x = document.getElementById("botonpais").value;
+function valorboton2() {
+  var x = document.getElementById("botonpais2").value;
   y = x.split("|")
-  document.getElementById("botoncompra").href = y[1];
-  document.getElementById("botoncompra").style.backgroundColor = "#227f56";
-  document.getElementById("botoncompra").style.borderColor = "#227f56";
-  document.getElementById("botoncompra").innerHTML = y[0];
+  document.getElementById("botoncompra2").href = y[1];
+  document.getElementById("botoncompra2").style.backgroundColor = "#227f56";
+  document.getElementById("botoncompra2").style.borderColor = "#227f56";
+  document.getElementById("botoncompra2").innerHTML = y[0];
 
 }
 </script>

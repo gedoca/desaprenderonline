@@ -26,13 +26,27 @@
   <link rel="stylesheet" href="assets/gallery/style.css">
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
   
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-KXLWMQS');</script>
+<!-- End Google Tag Manager -->
+
   
   
 </head>
 <body>
 
-<!-- Analytics -->
-<!-- Global site tag (gtag.js) - Google Ads: 972459097 --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-972459097"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-972459097'); </script>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KXLWMQS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+
+<script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-972459097'); </script>
 
 
  <!-- Facebook Pixel Code -->
@@ -57,9 +71,7 @@ src="https://www.facebook.com/tr?id=2210428312595198&ev=PageView&noscript=1"
 
   <section class="header3 cid-rGc9KXgnyY mbr-parallax-background" id="header3-2u">
 
-    
-
-    
+      
 
     <div class="container">
         <div class="media-container-row">
@@ -73,8 +85,36 @@ src="https://www.facebook.com/tr?id=2210428312595198&ev=PageView&noscript=1"
                 <div class="mbr-section-text mbr-white pb-3 ">
                     <p class="mbr-text mbr-fonts-style display-5"><br>Un curso online de los creadores de La Educación Prohibida para conocer el amplio universo de la <strong>educación alternativa </strong>desde una perspectiva integral, crítica y constructiva.</p>
                 </div>
-                <div class="mbr-section-btn"><a class="btn btn-md btn-primary display-4" href="index.html#features1-7">SABER MÁS</a>
-                    <a class="btn btn-md btn-white-outline display-4" href="index.html#pricing-tables2-4m">COMIENZA AHORA</a></div>
+                <div class="mbr-section-btn">
+				
+				<select id="botonpais" name="OS" class="btn btn-primary display-4" data-wow-delay="0.85s" onclick="$('#fh5co-download').goTo();return false;" onchange="valorboton()">
+<option id="comienza" selected value="TU PAÍS"> ELIGE TU PAÍS </option>
+   <option id="argentina" value="$ 1499|http://desaprenderonline.com/curso/argentina">Argentina</option> 
+   <option id="chile" value="$ 27900|http://desaprenderonline.com/curso/chile">Chile</option> 
+   <option id="colombia" value="$ 109000|http://desaprenderonline.com/curso/colombia">Colombia</option>
+   <option id="mexico" value="$ 690|http://desaprenderonline.com/curso/mexico">México</option> 
+         <option id="mundo" value="€ 34,9|http://desaprenderonline.com/curso/europa">Europa</option>  
+   <option id="mundo" value="US$ 39|http://desaprenderonline.com/curso/mundo">Resto del Mundo</option>   
+</select>
+
+
+
+<a id="botoncompra" class="btn btn-primary display-4" style="border-color: grey; background-color: grey; color: #fff; opacity: 1; margin: 10px; padding: 20px;" href="#features1-7">SABER MÁS</a>
+
+<script>
+function valorboton() {
+  var x = document.getElementById("botonpais").value;
+  y = x.split("|")
+  document.getElementById("botoncompra").href = y[1];
+  document.getElementById("botoncompra").style.backgroundColor = "#227f56";
+  document.getElementById("botoncompra").style.borderColor = "#227f56";
+  document.getElementById("botoncompra").innerHTML = y[0];
+
+}
+</script>
+
+				   
+				</div>
             </div>
         </div>
     </div>
